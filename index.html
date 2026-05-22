@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Вечеря від Вікторії</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--rose:#c9637a;--rose-light:#f5dde4;--rose-pale:#fdf0f3;--rose-dark:#8b3a50;--cream:#fdf8f4;--warm:#f0e6dc;--text:#2a1a20;--muted:#8a6872;--gold:#c9a96e}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -16,29 +16,27 @@ body{background:var(--cream);font-family:'Nunito',sans-serif;color:var(--text)}
 .hero-tag{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:400}
 .hero-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:6px}
 .hero-title em{color:#f5dde4;font-style:italic}
-.hero-sub{font-size:13px;font-weight:300;color:rgba(255,255,255,0.5)}
+.hero-sub{font-size:13px;font-weight:400;color:rgba(255,255,255,0.5)}
 .filter-wrap{padding:18px 16px 6px;overflow-x:auto;scrollbar-width:none}
 .filter-wrap::-webkit-scrollbar{display:none}
 .filters{display:flex;gap:8px;width:max-content}
-.fbtn{font-family:'Nunito',sans-serif;font-size:13px;font-weight:500;padding:7px 16px;border-radius:20px;border:1px solid #e0c8ce;background:white;color:var(--muted);cursor:pointer;white-space:nowrap}
+.fbtn{font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;padding:7px 16px;border-radius:20px;border:1px solid #e0c8ce;background:white;color:var(--muted);cursor:pointer;white-space:nowrap}
 .fbtn.active{background:var(--rose);border-color:var(--rose);color:white}
-.sec-label{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);padding:14px 20px 8px}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);padding:14px 20px 8px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:4px 16px 130px}
 .card{background:white;border-radius:16px;overflow:hidden;border:1.5px solid transparent;cursor:pointer;position:relative;box-shadow:0 2px 12px rgba(180,80,100,0.06)}
 .card.in-cart{border-color:var(--rose)}
-.card-img-wrap{width:100%;aspect-ratio:4/3;background:var(--warm);display:flex;align-items:center;justify-content:center;font-size:38px;overflow:hidden;position:relative}
-.card-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-.card-img-wrap .loader{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--warm);font-size:10px;color:var(--muted);font-family:'Nunito',sans-serif;text-align:center;padding:8px}
+.card-thumb{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative}
 .card-body{padding:10px 11px 12px}
 .card-name{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;line-height:1.3;color:var(--text);margin-bottom:4px}
 .card-desc{font-size:11px;font-weight:400;color:var(--muted);line-height:1.5;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
-.cat-badge{font-size:10px;font-weight:600;color:var(--rose);background:var(--rose-pale);padding:3px 8px;border-radius:10px}
-.add-btn{width:28px;height:28px;border-radius:50%;background:var(--rose-pale);border:none;color:var(--rose);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;line-height:1;font-weight:600}
+.cat-badge{font-size:10px;font-weight:700;color:var(--rose);background:var(--rose-pale);padding:3px 8px;border-radius:10px}
+.add-btn{width:28px;height:28px;border-radius:50%;background:var(--rose-pale);border:none;color:var(--rose);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700}
 .card.in-cart .add-btn{background:var(--rose);color:white}
-.chk{position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:var(--rose);color:white;font-size:12px;display:none;align-items:center;justify-content:center}
+.chk{position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:var(--rose);color:white;font-size:12px;display:none;align-items:center;justify-content:center;z-index:2}
 .card.in-cart .chk{display:flex}
-.fab{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--rose-dark),var(--rose));color:white;border:none;border-radius:30px;padding:14px 28px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(140,50,70,0.35);z-index:100;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s}
+.fab{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--rose-dark),var(--rose));color:white;border:none;border-radius:30px;padding:14px 28px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(140,50,70,0.35);z-index:100;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s}
 .fab.on{opacity:1;pointer-events:auto}
 .fab-cnt{background:white;color:var(--rose);border-radius:50%;width:22px;height:22px;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .ov{position:fixed;inset:0;background:rgba(30,10,15,0.5);z-index:200;display:none}
@@ -48,19 +46,19 @@ body{background:var(--cream);font-family:'Nunito',sans-serif;color:var(--text)}
 .dhandle{width:36px;height:4px;background:#e0d0d5;border-radius:2px;margin:12px auto 0}
 .dhead{padding:16px 20px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rose-light)}
 .dtitle{font-family:'Playfair Display',serif;font-size:22px;font-weight:600}
-.dclose{background:var(--rose-pale);border:none;border-radius:50%;width:32px;height:32px;font-size:18px;color:var(--rose);cursor:pointer}
+.dclose{background:var(--rose-pale);border:none;border-radius:50%;width:32px;height:32px;font-size:18px;color:var(--rose);cursor:pointer;display:flex;align-items:center;justify-content:center}
 .citems{padding:12px 20px}
 .citem{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f5eaec}
 .citem:last-child{border-bottom:none}
-.cthumb{width:44px;height:44px;border-radius:12px;background:var(--rose-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;overflow:hidden}
+.cthumb{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;overflow:hidden}
 .cthumb img{width:100%;height:100%;object-fit:cover}
 .cname{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;flex:1;line-height:1.3}
 .cremove{background:none;border:none;color:#d0a0a8;font-size:20px;cursor:pointer;padding:4px}
 .cempty{text-align:center;padding:32px 20px;color:var(--muted);font-size:14px;font-weight:400}
 .note-wrap{padding:4px 20px 16px}
-.note-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.note-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 .note-inp{width:100%;border:1px solid #e8d0d5;border-radius:12px;padding:10px 14px;font-family:'Nunito',sans-serif;font-size:14px;color:var(--text);resize:none;background:var(--rose-pale);outline:none}
-.send-btn{display:block;width:calc(100% - 40px);margin:0 20px 20px;background:linear-gradient(135deg,var(--rose-dark),var(--rose));color:white;border:none;border-radius:16px;padding:16px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:0.02em}
+.send-btn{display:block;width:calc(100% - 40px);margin:0 20px 20px;background:linear-gradient(135deg,var(--rose-dark),var(--rose));color:white;border:none;border-radius:16px;padding:16px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;cursor:pointer}
 .send-btn:disabled{opacity:0.4}
 .success{display:none;text-align:center;padding:32px 24px 40px}
 .success.on{display:block}
@@ -71,8 +69,8 @@ body{background:var(--cream);font-family:'Nunito',sans-serif;color:var(--text)}
 .mov.on{display:block}
 .modal{position:fixed;bottom:0;left:0;right:0;background:white;border-radius:24px 24px 0 0;z-index:500;transform:translateY(100%);transition:transform 0.3s cubic-bezier(0.32,0.72,0,1);max-height:85vh;overflow-y:auto}
 .modal.on{transform:translateY(0)}
-.modal-img{width:100%;height:200px;background:var(--warm);display:flex;align-items:center;justify-content:center;font-size:60px;overflow:hidden}
-.modal-img img{width:100%;height:100%;object-fit:cover}
+.modal-thumb{width:100%;height:200px;display:flex;align-items:center;justify-content:center;font-size:72px;overflow:hidden}
+.modal-thumb img{width:100%;height:100%;object-fit:cover}
 .modal-body{padding:20px 22px 24px}
 .modal-cat{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);margin-bottom:6px}
 .modal-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-bottom:10px;line-height:1.2}
@@ -101,13 +99,13 @@ body{background:var(--cream);font-family:'Nunito',sans-serif;color:var(--text)}
 
 <div class="filter-wrap">
   <div class="filters">
-    <button class="fbtn active" onclick="setFilter('all',this)">Усі страви</button>
-    <button class="fbtn" onclick="setFilter('Супи',this)">Супи</button>
-    <button class="fbtn" onclick="setFilter('Курка',this)">Курка</button>
-    <button class="fbtn" onclick="setFilter('М’ясо',this)">М'ясо</button>
-    <button class="fbtn" onclick="setFilter('Гарніри',this)">Гарніри</button>
-    <button class="fbtn" onclick="setFilter('Салати',this)">Салати</button>
-    <button class="fbtn" onclick="setFilter('Інше',this)">Інше</button>
+    <button class="fbtn active" onclick="sf('all',this)">Усі страви</button>
+    <button class="fbtn" onclick="sf('Супи',this)">Супи</button>
+    <button class="fbtn" onclick="sf('Курка',this)">Курка</button>
+    <button class="fbtn" onclick="sf('М’ясо',this)">М'ясо</button>
+    <button class="fbtn" onclick="sf('Гарніри',this)">Гарніри</button>
+    <button class="fbtn" onclick="sf('Салати',this)">Салати</button>
+    <button class="fbtn" onclick="sf('Інше',this)">Інше</button>
   </div>
 </div>
 
@@ -142,54 +140,54 @@ body{background:var(--cream);font-family:'Nunito',sans-serif;color:var(--text)}
 
 <div class="mov" id="mov" onclick="closeModal()"></div>
 <div class="modal" id="modal">
-  <div id="modalImg" class="modal-img"></div>
+  <div id="modalThumb" class="modal-thumb"></div>
   <div class="modal-body">
     <div class="modal-cat" id="modalCat"></div>
     <div class="modal-title" id="modalTitle"></div>
     <div class="modal-desc" id="modalDesc"></div>
-    <button class="modal-btn" id="modalBtn" onclick="modalToggle()">+ Додати до кошика</button>
+    <button class="modal-btn" id="modalBtn" onclick="mt()">+ Додати до кошика</button>
   </div>
 </div>
 
 <div class="toast" id="toast">Додано до кошика &#127800;</div>
 
 <script>
-var EJPK='_Uh6CxYtQESKRYsx_', EJSID='gmail', EJTID='template_k08cyad';
+var EJK='_Uh6CxYtQESKRYsx_',EJS='gmail',EJT='template_k08cyad';
 
 var D=[
-  {i:1,  n:"Борщ червоний",                   c:"Супи",       e:"&#127858;", img:"", d:"Густий борщ зі свининою та свіжим буряком. Подається зі сметаною та пампушками."},
-  {i:2,  n:"Суп грибний",                     c:"Супи",       e:"&#127812;", img:"", d:"Ароматний суп із лісових грибів із вершковими нотками та свіжою зеленню."},
-  {i:3,  n:"М’ясо по-французьки",        c:"М’ясо", e:"&#129385;", img:"", d:"Свинина під золотавою скоринкою з томатами, цибулею та плавленим сиром."},
-  {i:4,  n:"Стейки",                          c:"М’ясо", e:"&#129385;", img:"", d:"Соковиті стейки зі свіжої свинини, приправлені травами та часником."},
-  {i:5,  n:"Свинина в кисло-солодкому соусі", c:"М’ясо", e:"&#129382;", img:"", d:"Ніжна свинина в яскравому кисло-солодкому соусі з ананасом."},
-  {i:6,  n:"Котлети звичайні",                c:"М’ясо", e:"&#129385;", img:"", d:"Домашні соковиті котлети з рум'яною скоринкою."},
-  {i:7,  n:"Курячі битки",                    c:"Курка",      e:"&#127831;", img:"", d:"Тонко відбита куряча грудка з хрусткою скоринкою. Ніжна та соковита."},
-  {i:8,  n:"Курячі котлети з ананасом",       c:"Курка",      e:"&#127821;", img:"", d:"Котлети з курячого філе з соковитим шматочком ананасу та сиром."},
-  {i:9,  n:"Курка в кисло-солодкому соусі",   c:"Курка",      e:"&#127821;", img:"", d:"Шматочки курки з ананасом у яскравому кисло-солодкому соусі."},
-  {i:10, n:"Курячі крильця запечені",          c:"Курка",      e:"&#127831;", img:"", d:"Хрусткі запечені крильця зі спеціями та часниковим маслом."},
-  {i:11, n:"Крильця в соусі теріякі",         c:"Курка",      e:"&#127831;", img:"", d:"Крильця в солодкому японському соусі теріякі з кунжутом."},
-  {i:12, n:"Курячі гомілки запечені",          c:"Курка",      e:"&#127831;", img:"", d:"Соковиті гомілки, запечені з травами та часниковим маслом."},
-  {i:13, n:"Гомілки в соусі барбекю",         c:"Курка",      e:"&#127817;", img:"", d:"Гомілки в димному соусі барбекю з апетитною скоринкою."},
-  {i:14, n:"Смажена картопля",                c:"Гарніри",    e:"&#129364;", img:"", d:"Хрустка картопля, смажена до золотистого кольору з кропом."},
-  {i:15, n:"Молода смажена картопля",         c:"Гарніри",    e:"&#127807;", img:"", d:"Ніжна молода картопля зі скоринкою, обсмажена з вершковим маслом та зеленню."},
-  {i:16, n:"Картопляне пюре",                 c:"Гарніри",    e:"&#129364;", img:"", d:"Шовковисте пюре з вершковим маслом та сіллю."},
-  {i:17, n:"Макарони",                        c:"Гарніри",    e:"&#127837;", img:"", d:"Відварені макарони з вершковим маслом — швидко і ситно."},
-  {i:18, n:"Гречка з томатною підливою",      c:"Гарніри",    e:"&#127807;", img:"", d:"Розсипчаста гречка з апетитною томатною підливою та м'ясом."},
-  {i:19, n:"Пельмені",                        c:"Інше",       e:"&#129567;", img:"", d:"Соковиті пельмені з м'ясною начинкою, подані зі сметаною."},
-  {i:20, n:"Вареники домашні",                c:"Інше",       e:"&#129567;", img:"", d:"Домашні вареники з картоплею та шкварками."},
-  {i:21, n:"Салат Східний",                   c:"Салати",     e:"&#129367;", img:"", d:"Салат зі смаженими грибами та куркою, свіжими овочами та пікантною заправкою."},
-  {i:22, n:"Салат Цезар",                     c:"Салати",     e:"&#129367;", img:"", d:"Класичний Цезар з листям айсберг, сухариками та фірмовим соусом."},
-  {i:23, n:"Солоні огірки",                   c:"Салати",     e:"&#129361;", img:"", d:"Хрусткі домашні солоні огірки — ідеальне доповнення до будь-якої страви."},
-  {i:24, n:"Помідори з майонезом",            c:"Салати",     e:"&#127813;", img:"", d:"Свіжі помідори з майонезом та сіллю."},
-  {i:25, n:"Помідори без майонезу",           c:"Салати",     e:"&#127813;", img:"", d:"Свіжі нарізані помідори з сіллю."}
+  {i:1,  n:"Борщ червоний",                   c:"Супи",       bg:"#fde8e8", e:"&#127858;", d:"Густий борщ зі свининою та свіжим буряком. Подається зі сметаною."},
+  {i:2,  n:"Суп грибний",                     c:"Супи",       bg:"#e8f5e8", e:"&#127812;", d:"Ароматний суп із лісових грибів із вершковими нотками та зеленню."},
+  {i:3,  n:"М’ясо по-французьки",        c:"М’ясо", bg:"#fde8d0", e:"&#129385;", d:"Свинина під золотавою скоринкою з томатами, цибулею та сиром."},
+  {i:4,  n:"Стейки",                          c:"М’ясо", bg:"#fde8d0", e:"&#129385;", d:"Соковиті стейки зі свіжої свинини, приправлені травами та часником."},
+  {i:5,  n:"Свинина в кисло-солодкому соусі", c:"М’ясо", bg:"#fde8d0", e:"&#129382;", d:"Ніжна свинина в яскравому кисло-солодкому соусі з ананасом."},
+  {i:6,  n:"Котлети звичайні",                c:"М’ясо", bg:"#fde8d0", e:"&#129385;", d:"Домашні соковиті котлети з рум’яною скоринкою."},
+  {i:7,  n:"Курячі битки",                    c:"Курка",      bg:"#fff3d0", e:"&#127831;", d:"Тонко відбита куряча грудка з хрусткою скоринкою."},
+  {i:8,  n:"Курячі котлети з ананасом",       c:"Курка",      bg:"#fff3d0", e:"&#127821;", d:"Котлети з курячого філе з ананасом та сиром."},
+  {i:9,  n:"Курка в кисло-солодкому соусі",   c:"Курка",      bg:"#fff3d0", e:"&#127821;", d:"Шматочки курки з ананасом у кисло-солодкому соусі."},
+  {i:10, n:"Курячі крильця запечені",          c:"Курка",      bg:"#fff3d0", e:"&#127831;", d:"Хрусткі запечені крильця зі спеціями та часниковим маслом."},
+  {i:11, n:"Крильця в соусі теріякі",         c:"Курка",      bg:"#fff3d0", e:"&#127831;", d:"Крильця в солодкому японському соусі теріякі з кунжутом."},
+  {i:12, n:"Курячі гомілки запечені",          c:"Курка",      bg:"#fff3d0", e:"&#127831;", d:"Соковиті гомілки, запечені з травами та часниковим маслом."},
+  {i:13, n:"Гомілки в соусі барбекю",         c:"Курка",      bg:"#fff3d0", e:"&#127817;", d:"Гомілки в димному соусі барбекю з апетитною скоринкою."},
+  {i:14, n:"Смажена картопля",                c:"Гарніри",    bg:"#fdf5d0", e:"&#129364;", d:"Хрустка картопля, смажена до золотистого кольору з кропом."},
+  {i:15, n:"Молода смажена картопля",         c:"Гарніри",    bg:"#edfde8", e:"&#127807;", d:"Ніжна молода картопля зі скоринкою з вершковим маслом та зеленню."},
+  {i:16, n:"Картопляне пюре",                 c:"Гарніри",    bg:"#fdf5d0", e:"&#129364;", d:"Шовковисте пюре з вершковим маслом та сіллю."},
+  {i:17, n:"Макарони",                        c:"Гарніри",    bg:"#fde8e0", e:"&#127837;", d:"Відварені макарони з вершковим маслом."},
+  {i:18, n:"Гречка з томатною підливою",      c:"Гарніри",    bg:"#edfde8", e:"&#127807;", d:"Розсипчаста гречка з томатною підливою та м’ясом."},
+  {i:19, n:"Пельмені",                        c:"Інше",       bg:"#f0e8fd", e:"&#129567;", d:"Соковиті пельмені з м’ясною начинкою зі сметаною."},
+  {i:20, n:"Вареники домашні",                c:"Інше",       bg:"#f0e8fd", e:"&#129567;", d:"Домашні вареники з картоплею та шкварками."},
+  {i:21, n:"Салат Східний",                   c:"Салати",     bg:"#edfde8", e:"&#129367;", d:"Салат зі смаженими грибами та куркою, свіжими овочами."},
+  {i:22, n:"Салат Цезар",                     c:"Салати",     bg:"#edfde8", e:"&#129367;", d:"Цезар з листям айсберг, сухариками та фірмовим соусом."},
+  {i:23, n:"Солоні огірки",                   c:"Салати",     bg:"#edfde8", e:"&#129361;", d:"Хрусткі домашні солоні огірки до будь-якої страви."},
+  {i:24, n:"Помідори з майонезом",            c:"Салати",     bg:"#fde8e8", e:"&#127813;", d:"Свіжі помідори з майонезом та сіллю."},
+  {i:25, n:"Помідори без майонезу",           c:"Салати",     bg:"#fde8e8", e:"&#127813;", d:"Свіжі нарізані помідори з сіллю."}
 ];
 
-var imgCache={}, cart=[], curFilter='all', curModal=null;
+var cart=[],curF='all',curM=null;
 
-function gd(id){for(var k=0;k<D.length;k++){if(D[k].i===id)return D[k];}return null;}
+function gd(id){for(var k=0;k<D.length;k++)if(D[k].i===id)return D[k];return null;}
 
-function setFilter(cat,btn){
-  curFilter=cat;
+function sf(cat,btn){
+  curF=cat;
   var bs=document.querySelectorAll('.fbtn');
   for(var j=0;j<bs.length;j++)bs[j].classList.remove('active');
   btn.classList.add('active');
@@ -198,17 +196,13 @@ function setFilter(cat,btn){
 }
 
 function rg(){
-  var list=[];
-  for(var k=0;k<D.length;k++){if(curFilter==='all'||D[k].c===curFilter)list.push(D[k]);}
-  var h='';
-  for(var i=0;i<list.length;i++){
-    var d=list[i];
-    var ic=cart.indexOf(d.i)>=0;
-    var imgHtml=imgCache[d.i]
-      ?'<img src="'+imgCache[d.i]+'" alt="'+d.n+'" style="width:100%;height:100%;object-fit:cover">'
-      :'<span class="loader">Завантаження фото...</span>'+d.e;
+  var list=[],k;
+  for(k=0;k<D.length;k++)if(curF==='all'||D[k].c===curF)list.push(D[k]);
+  var h='',i,d,ic;
+  for(i=0;i<list.length;i++){
+    d=list[i];ic=cart.indexOf(d.i)>=0;
     h+='<div class="card'+(ic?' in-cart':'')+'" onclick="om('+d.i+')">';
-    h+='<div class="card-img-wrap">'+imgHtml+'</div>';
+    h+='<div class="card-thumb" style="background:'+d.bg+'">'+d.e+'</div>';
     h+='<div class="chk">&#10003;</div>';
     h+='<div class="card-body">';
     h+='<div class="card-name">'+d.n+'</div>';
@@ -219,84 +213,48 @@ function rg(){
     h+='</div></div></div>';
   }
   document.getElementById('grid').innerHTML=h;
-  loadImgs(list);
-}
-
-function loadImgs(list){
-  for(var i=0;i<list.length;i++){
-    var d=list[i];
-    if(!imgCache[d.i]){
-      genImg(d);
-    }
-  }
-}
-
-function genImg(d){
-  var id=d.i;
-  var prompt='Professional food photography, Ukrainian home cooking, '+d.n+', appetizing, warm lighting, rustic wooden table, top-down view, high quality';
-  fetch('https://api.anthropic.com/v1/messages',{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({
-      model:'claude-sonnet-4-20250514',
-      max_tokens:100,
-      messages:[{role:'user',content:'Respond with only a single food emoji that best represents: '+d.n+'. Just the emoji, nothing else.'}]
-    })
-  }).then(function(r){return r.json();}).then(function(data){
-    if(data.content&&data.content[0]){
-      // fallback: use Unsplash food images by keyword
-    }
-  }).catch(function(){});
-
-  // Use food image from picsum with seed based on dish id
-  var keywords=encodeURIComponent(d.n.split(' ')[0]);
-  var img=new Image();
-  var src='https://source.unsplash.com/300x225/?food,'+keywords+'&sig='+id;
-  img.onload=function(){
-    imgCache[id]=src;
-    var el=document.querySelector('#grid .card[onclick="om('+id+')"] .card-img-wrap');
-    if(el)el.innerHTML='<img src="'+src+'" alt="" style="width:100%;height:100%;object-fit:cover">';
-  };
-  img.src=src;
 }
 
 function sp(e){e.stopPropagation();}
+
 function tc(id){
   var idx=cart.indexOf(id);
-  if(idx>=0){cart.splice(idx,1);}else{cart.push(id);st();}
-  rg();uf();if(curModal===id)umb();
+  if(idx>=0)cart.splice(idx,1);else{cart.push(id);st();}
+  rg();uf();if(curM===id)umb();
 }
+
 function uf(){
   document.getElementById('fabCnt').textContent=cart.length;
-  if(cart.length>0){document.getElementById('fab').classList.add('on');}
-  else{document.getElementById('fab').classList.remove('on');}
+  var f=document.getElementById('fab');
+  if(cart.length>0)f.classList.add('on');else f.classList.remove('on');
 }
+
 function openCart(){rc();document.getElementById('ov').classList.add('on');document.getElementById('drawer').classList.add('on');}
 function closeCart(){document.getElementById('ov').classList.remove('on');document.getElementById('drawer').classList.remove('on');}
+
 function rc(){
-  var el=document.getElementById('citems');
-  var nw=document.getElementById('noteWrap');
-  var sb=document.getElementById('sendBtn');
+  var el=document.getElementById('citems'),nw=document.getElementById('noteWrap'),sb=document.getElementById('sendBtn');
   if(cart.length===0){
     el.innerHTML='<div class="cempty">Кошик порожній — оберіть страви</div>';
     nw.style.display='none';sb.disabled=true;
   }else{
-    var h='';
-    for(var i=0;i<cart.length;i++){
-      var d=gd(cart[i]);
-      var th=imgCache[d.i]?'<img src="'+imgCache[d.i]+'" alt="">':d.e;
-      h+='<div class="citem"><div class="cthumb">'+th+'</div>';
+    var h='',i,d;
+    for(i=0;i<cart.length;i++){
+      d=gd(cart[i]);
+      h+='<div class="citem"><div class="cthumb" style="background:'+d.bg+'">'+d.e+'</div>';
       h+='<div class="cname">'+d.n+'</div>';
       h+='<button class="cremove" onclick="rm('+d.i+')">&#10005;</button></div>';
     }
     el.innerHTML=h;nw.style.display='block';sb.disabled=false;
   }
 }
+
 function rm(id){var idx=cart.indexOf(id);if(idx>=0)cart.splice(idx,1);rc();rg();uf();}
+
 function om(id){
-  var d=gd(id);curModal=id;
-  var mi=document.getElementById('modalImg');
-  mi.innerHTML=imgCache[id]?'<img src="'+imgCache[id]+'" alt="" style="width:100%;height:100%;object-fit:cover">':d.e;
+  var d=gd(id);curM=id;
+  var mt=document.getElementById('modalThumb');
+  mt.innerHTML=d.e;mt.style.background=d.bg;
   document.getElementById('modalCat').textContent=d.c;
   document.getElementById('modalTitle').textContent=d.n;
   document.getElementById('modalDesc').textContent=d.d;
@@ -304,26 +262,28 @@ function om(id){
   document.getElementById('mov').classList.add('on');
   document.getElementById('modal').classList.add('on');
 }
-function closeModal(){document.getElementById('mov').classList.remove('on');document.getElementById('modal').classList.remove('on');curModal=null;}
+
+function closeModal(){document.getElementById('mov').classList.remove('on');document.getElementById('modal').classList.remove('on');curM=null;}
+
 function umb(){
-  var btn=document.getElementById('modalBtn');
-  var ic=cart.indexOf(curModal)>=0;
+  var btn=document.getElementById('modalBtn'),ic=cart.indexOf(curM)>=0;
   btn.innerHTML=ic?'&#10003; Вже в кошику':'+ Додати до кошика';
-  if(ic){btn.classList.add('added');}else{btn.classList.remove('added');}
+  if(ic)btn.classList.add('added');else btn.classList.remove('added');
 }
-function modalToggle(){tc(curModal);}
+
+function mt(){tc(curM);}
+
 function st(){var t=document.getElementById('toast');t.classList.add('on');setTimeout(function(){t.classList.remove('on');},2000);}
+
 function sendOrder(){
-  var sb=document.getElementById('sendBtn');
-  var note=document.getElementById('noteText').value;
-  var lines='';
-  for(var i=0;i<cart.length;i++)lines+=(i+1)+'. '+gd(cart[i]).n+'\n';
+  var sb=document.getElementById('sendBtn'),note=document.getElementById('noteText').value,lines='',i;
+  for(i=0;i<cart.length;i++)lines+=(i+1)+'. '+gd(cart[i]).n+'\n';
   sb.disabled=true;sb.textContent='Надсилаю...';
   var s=document.createElement('script');
   s.src='https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
   s.onload=function(){
-    emailjs.init(EJPK);
-    emailjs.send(EJSID,EJTID,{dishes_list:lines,note:note||'--'}).then(function(){
+    emailjs.init(EJK);
+    emailjs.send(EJS,EJT,{dishes_list:lines,note:note||'--'}).then(function(){
       document.getElementById('dContent').classList.add('hidden');
       document.getElementById('successScreen').classList.add('on');
       cart=[];rg();uf();
@@ -334,6 +294,7 @@ function sendOrder(){
   };
   document.head.appendChild(s);
 }
+
 rg();
 </script>
 </body>
